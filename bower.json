@@ -1,0 +1,23 @@
+{
+  "name": "global-theme",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bearfriend/global-theme",
+  "authors": [
+    "Danny Gleckler <daniel.gleckler@desire2learn.com>"
+  ],
+  "description": "Global theme for web components",
+  "main": "global-theme.html",
+  "license": "n/a/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-style": "Polymer/core-style#~0.4.2",
+    "polymer": "Polymer/polymer#~0.4.2"
+  }
+}
