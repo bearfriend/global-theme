@@ -1,27 +1,20 @@
 <link rel="import" href="../core-style/core-style.html">
 
-<polymer-element name="global-theme">
-
-  <template>
-	<core-style id="globalTheme">
-	  
-	  paper-input /deep/ .focused-underline, paper-input /deep/ .cursor {
-	  background-color: #7A2E4A;
-	  }
-	  
-	  paper-input {
-	  color: #666;
-	  }
-	  
-	</core-style>
-  </template>
+<script>
+  CoreStyle.g.colorOne = '#7A2E4A';
+</script>
+<core-style id="globalTheme">
   
-  <script>
-
-    Polymer('global-theme', {
-    
-    });
-
-  </script>
-
-</polymer-element>
+  paper-input /deep/ .focused-underline, paper-input /deep/ .cursor {
+  background-color: {{g.colorOne}};
+  }
+  
+  paper-input {
+  color: #666;
+  }
+  
+  paper-input[focused] {
+  color: #757575;
+  }
+  
+</core-style>
