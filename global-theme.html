@@ -1,20 +1,17 @@
-<link rel="import" href="../core-style/core-style.html">
-
-<script>
-  CoreStyle.g.colorOne = '#7A2E4A';
-</script>
+<link rel="import" href="../core-style/core-style.html" />
+<script src="main.js"></script>
 <core-style id="globalTheme">
   
   paper-input /deep/ .focused-underline, paper-input /deep/ .cursor {
-  background-color: {{g.colorOne}};
+    background-color: {{ g.theme.colors.palette[0] }};
   }
   
   paper-input {
-  color: #666;
+    color: {{ g.theme.colors.text.dim }};
   }
   
   paper-input[focused] {
-  color: #757575;
+    color: {{ g.theme.colors.text.dimDim }};
   }
   
 </core-style>
