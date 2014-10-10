@@ -1,10 +1,27 @@
 <link rel="import" href="../core-style/core-style.html" />
 <script src="main.js"></script>
 <core-style id="globalTheme">
+
+  /*
+  
+  This stylesheet will be consumed at the top level of each app.
+  It may or may not be consumed by each first-party component and,
+  obviously, is not likely to be consumed by third-party components.
+
+  This means we cannot rely on the scope being correct, and should
+  always include /deep/ elements in our selectors, and use the
+  ::shadow pseudo-class if and where appropriate.
+
+  If you do not understand the /deep/ combinator, or the ::shadow
+  pseudo-class, please read up on them, and understand the affect
+  of their position without a selector before attempting to add to
+  or modify this stylesheet. Thank you!
+  
+  */
   
   paper-input /deep/ .focused-underline,
   paper-input /deep/ .cursor,
-  html /deep/ paper-button {
+  paper-button {
     background-color: {{ g.theme.colors.palette[0] }};
   }
 
@@ -39,6 +56,10 @@
   
   .form-row {
     margin: .75em 0px;
+  }
+
+  .small-text {
+    font-size: .85em
   }
   
 </core-style>
