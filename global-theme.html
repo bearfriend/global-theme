@@ -19,46 +19,46 @@
   
   */
   
-  paper-input /deep/ .focused-underline,
-  paper-input /deep/ .cursor,
-  paper-button {
+  html /deep/ paper-input /deep/ .focused-underline,
+  html /deep/ paper-input /deep/ .cursor,
+  html /deep/ paper-button {
     background-color: {{ g.theme.colors.palette[0] }};
   }
 
-  paper-button {
+  html /deep/ paper-button {
     color: rgba(255, 255, 255,.8);
     padding: .5em 1em;
     margin: 0px;
   }
   
-  paper-button.link {
+  html /deep/ paper-button.link {
     background-color: transparent !important;
     color: {{ g.theme.colors.links.main }};
     padding: 0px;
     display: inline;
   }
   
-  paper-input {
+  html /deep/ paper-input {
     width: 100%;
     color: {{ g.theme.colors.text.dim }};
   }
   
-  paper-input[focused] {
+  html /deep/ paper-input[focused] {
     color: {{ g.theme.colors.text.dimDim }};
   }
 
-  core-card {
+  html /deep/ core-card {
     border-radius: 2px;
     background-color: rgba(255, 255, 255,.55);
     padding: 2.25em 3.5em;
     box-sizing: border-box;
   }
   
-  .form-row {
+  html /deep/ .form-row {
     margin: .75em 0px;
   }
 
-  .small-text {
+  html /deep/ .small-text {
     font-size: .85em
   }
   
