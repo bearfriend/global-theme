@@ -19,10 +19,15 @@
   
   */
 
-  html /deep/ a {
-    text-decoration: none;
+  html /deep/ h1 {
+    font-size: 1.75em;
   }
 
+  html /deep/ .sso-card > .heading {
+    /* eh... */
+    margin-bottom: 0px;
+  }
+  
   html /deep/ [center-text] {
     text-align: center;
   }
@@ -56,11 +61,18 @@
     text-transform: none;
   }
   
-  html /deep/ a, html /deep/ paper-button.link {
+  html /deep/ a,
+  html /deep/ paper-button.link {
     background-color: transparent !important;
     color: {{ g.theme.colors.links.main }};
     padding: 0px;
     text-transform: none;
+    text-decoration: none;
+  }
+
+  html /deep/ a:hover,
+  html /deep/ paper-button.link:hover {
+    text-decoration: underline;
   }
   
   html /deep/ paper-input {
