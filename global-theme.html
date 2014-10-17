@@ -37,15 +37,15 @@
   }
 
   html /deep/ sign-in-form,
-  html /deep/ sign-up-form,
-  html /deep/ forgot-pw-form {
+  html /deep/ forgot-pw-form,
+  html /deep/ sign-up-form:not([marketing]),
+  html /deep/ sign-up-form[marketing]::shadow .sso-card {
     width: 450px;
-    max-width: 100%;
-    position: relative;
   }
   
   html /deep/.sso-card {
     width: 100%;
+    position: relative;
   }
   
   html /deep/ paper-input /deep/ .focused-underline,
