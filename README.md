@@ -19,12 +19,22 @@ Import into your app:
 ...
 </head>
 ```
-	
+
+###
+
 Or import into a new pl-* component to force it on all instances of the element:
 
 ```html
+<link rel="import" href="../polymer/polymer.html" />
 <link rel="import" href="../pl-config/pl-config.html" />
 ...
-<polymer-element ... >
-...
+<polymer-element name="pl-awesome" noscript>
+    <template>
+	    // all pl-* components should contain the following line
+        <core-style ref="globalTheme"></core-style>
+
+		<span>Awesome!</span>
+    </template>
+	...
+</polymer-element>
 ```

@@ -17,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-	"polymer": "Polymer/polymer#~0.4.2"
-    "core-style": "Polymer/core-style#~0.4.2",
+	"polymer": "Polymer/polymer#~0.4.2",
+    "core-style": "Polymer/core-style#~0.4.2"
   }
 }
