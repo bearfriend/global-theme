@@ -1,13 +1,13 @@
 {
-  "name": "global-theme",
+  "name": "pl-config",
   "version": "0.0.0",
-  "homepage": "https://github.com/bearfriend/global-theme",
+  "homepage": "https://github.com/bearfriend/pl-config",
   "authors": [
     "Danny Gleckler <daniel.gleckler@desire2learn.com>"
   ],
-  "description": "Global theme for web components",
-  "main": "global-theme.html",
-  "license": "n/a/",
+  "description": "Configuration for internally-developed web components",
+  "main": "pl-config.html",
+  "license": "n/a",
   "private": true,
   "ignore": [
     "**/.*",
@@ -17,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
+	"polymer": "Polymer/polymer#~0.4.2"
     "core-style": "Polymer/core-style#~0.4.2",
-    "polymer": "Polymer/polymer#~0.4.2"
   }
 }
