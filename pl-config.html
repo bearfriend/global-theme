@@ -102,6 +102,14 @@
   html /deep/ paper-button.fb {
     background-color: #2B77E5;
   }
+
+html /deep/ paper-checkbox::shadow #ink[checked] {
+    color: {{ g.theme.colors.palette[0] }};
+}
+
+html /deep/ paper-checkbox::shadow #checkbox.checked {
+    border-color: {{ g.theme.colors.palette[0] }};
+}
   
 </core-style>
 <core-style ref="globalTheme"></core-style>
