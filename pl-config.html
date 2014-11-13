@@ -48,8 +48,8 @@
     position: relative;
   }
   
-  html /deep/ pl-input /deep/ .focused-underline,
-  html /deep/ pl-input /deep/ .cursor,
+  html /deep/ pl-input::shadow .focused-underline,
+  html /deep/ pl-input::shadow .cursor,
   html /deep/ paper-button {
     background-color: {{ g.theme.colors.palette[0] }};
   }
@@ -59,6 +59,10 @@
     padding: .5em 1em;
     margin: 0px;
     text-transform: none;
+  }
+
+  html /deep/ paper-button::shadow .button-content {
+    padding: 0px;
   }
   
   html /deep/ a,
