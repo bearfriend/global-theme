@@ -1,4 +1,6 @@
 <link rel="import" href="../core-style/core-style.html" />
+<link rel="import" href="../pl-globals/pl-globals.html" />
+
 <script src="pl-config.js"></script>
 <core-style id="globalTheme">
 
@@ -120,3 +122,10 @@ html /deep/ paper-checkbox::shadow #checkbox.checked {
   
 </core-style>
 <core-style ref="globalTheme"></core-style>
+
+<pl-globals globals='{
+  "apiEndpoint": "",
+  "test": {
+    "key": [1,2,3]
+  }
+}'></pl-globals>
