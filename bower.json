@@ -17,7 +17,8 @@
     "tests"
   ],
   "dependencies": {
-	"polymer": "Polymer/polymer#~0.4.2",
-    "core-style": "Polymer/core-style#~0.4.2"
+    "polymer": "Polymer/polymer#~0.5.1",
+    "core-style": "Polymer/core-style#~0.5.1",
+    "pl-globals": "https://github.com/bearfriend/pl-globals.git"
   }
 }
