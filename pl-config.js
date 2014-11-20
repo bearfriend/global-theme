@@ -1,11 +1,34 @@
-CoreStyle.g.theme = _globalTheme = {
+// TODO: scope all this better
+
+var _globalTheme = {};
+
+_globalTheme.Color = function(hex) {
+	this.hex = new String(hex);
+	this.hex.toRgb = this.toRgb;
+	return '#'+this.hex;
+};
+_globalTheme.Color.prototype.toRgb = function() {
+	
+	var bigint = parseInt((this.length == 3
+						   ? this.split('').map(function(v) {
+							   return v+''+v;
+						   }).join('')
+						   : this), 16);
+	
+	return [bigint >> 16 & 255,
+			bigint >> 8 & 255,
+			bigint & 255].join();
+	
+};
+
+CoreStyle.g.theme = {
 	colors: {
-		palette: ['#7A2E4A','#2A3950','#704E44'],
+		palette: ['#7A2E4A','#2A3950','#704E44', new _globalTheme.Color('fea')],
 		get text() {
 			return {
 				main: '#333',
 				dim: '#666',
-				dimDim: '#777'
+				dimDim: '#777'				
 			}
 		},
 		links: {
@@ -18,3 +41,5 @@ CoreStyle.g.theme = _globalTheme = {
 		}
 	}
 };
+
+_globalTheme = CoreStyle.g.theme;
