@@ -31,12 +31,21 @@ CoreStyle.g.theme = {
 				dimDim: '#777'				
 			}
 		},
+		set text(v) {
+			return false;
+		},
 		links: {
 			get main() {
 				return _globalTheme.colors.palette[1]
 			},
+			set main(v) {
+				return false;
+			},
 			get hover() {
 				return _globalTheme.colors.palette[2]
+			},
+			set hover(v) {
+				return false;
 			}
 		}
 	}
