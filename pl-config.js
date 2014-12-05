@@ -3,17 +3,24 @@
 var _globalTheme = {};
 
 _globalTheme.Color = function(hex) {
+	var self = this;
+	hex = hex.charAt(0) == '#' ? hex : '#'+hex
 	this.hex = new String(hex);
-	this.hex.toRgb = this.toRgb;
-	return '#'+this.hex;
+	Object.defineProperty(this.hex, 'rgb', {
+			get: function() {
+					return self.toRgb();
+			}
+	});
+	return this.hex;
 };
-_globalTheme.Color.prototype.toRgb = function() {
 	
-	var bigint = parseInt((this.length == 3
-						   ? this.split('').map(function(v) {
+_globalTheme.Color.prototype.toRgb = function() {
+	hex = this.hex.substr(1);
+	var bigint = parseInt((hex.length == 3
+						   ? hex.split('').map(function(v) {
 							   return v+''+v;
 						   }).join('')
-						   : this), 16);
+						   : hex), 16);
 	
 	return [bigint >> 16 & 255,
 			bigint >> 8 & 255,
@@ -21,9 +28,18 @@ _globalTheme.Color.prototype.toRgb = function() {
 	
 };
 
+// factory
+_globalTheme.color = function(hex) {
+	return new _globalTheme.Color(hex);
+};
+
 CoreStyle.g.theme = {
 	colors: {
-		palette: ['#7A2E4A','#2A3950','#704E44', new _globalTheme.Color('fea')],
+		palette: [
+			_globalTheme.color('7A2E4A'),
+			_globalTheme.color('2A3950'),
+			_globalTheme.color('704E44')
+		],
 		get text() {
 			return {
 				main: '#333',
