@@ -50,13 +50,13 @@
     position: relative;
   }
 
-  html /deep/.sso-card pl-input {
+  html /deep/.sso-card pl-input-decorator {
     display: block;
     width: auto;
   }
   
-  html /deep/ pl-input::shadow paper-input-decorator::shadow .focused-underline,
-  html /deep/ pl-input::shadow paper-input-decorator::shadow .cursor,
+  html /deep/ pl-input-decorator::shadow .focused-underline,
+  html /deep/ pl-input-decorator::shadow .cursor,
   html /deep/ paper-button {
     background-color: {{ g.theme.colors.palette[0] }};
   }
@@ -98,11 +98,11 @@
     outline: none;
   }
   
-  html /deep/ pl-input {
+  html /deep/ pl-input-decorator {
     color: {{ g.theme.colors.text.dim }};
   }
   
-  html /deep/ pl-input[focused] {
+  html /deep/ pl-input-decorator[focused] {
     color: {{ g.theme.colors.text.dimDim }};
   }
 
