@@ -153,6 +153,10 @@ html /deep/ .hidden-input:focus + paper-button.hidden-input-button::after {
   border-radius: 2px;
   border: 1px solid;
 }
+
+html /deep/ paper-checkbox[required].invalid::shadow #checkbox {
+  border-color: #d34336;
+}
   
 </core-style>
 <core-style ref="globalTheme"></core-style>
