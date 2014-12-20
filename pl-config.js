@@ -68,3 +68,30 @@ CoreStyle.g.theme = {
 };
 
 _globalTheme = CoreStyle.g.theme;
+
+
+(function(document) {
+
+	function removeOldAlert() {
+		var oldAlert = document.getElementById("alert");
+		if (oldAlert) {
+			document.body.removeChild(oldAlert);
+		}
+	}
+
+	function addAlert(aMsg) {
+		removeOldAlert();
+		var newAlert = document.createElement("div");
+		newAlert.setAttribute("role", "alert");
+		newAlert.setAttribute("id", "alert");
+		var msg = document.createTextNode(aMsg);
+		newAlert.appendChild(msg);
+		document.body.appendChild(newAlert);
+	}
+	
+	window.addEventListener('decorator-invalid',function(e) {
+		//e.detail.input.focus();
+		addAlert(e.detail.error);
+	});
+	
+})(window.document);
