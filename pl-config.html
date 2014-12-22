@@ -157,6 +157,12 @@ html /deep/ .hidden-input:focus + paper-button.hidden-input-button::after {
 html /deep/ paper-checkbox[required].invalid::shadow #checkbox {
   border-color: #d34336;
 }
+
+/* TODO: move this to a new core-style for overlays */
+html /deep/ core-overlay {
+  background-color: #fff;
+  padding: 1em;
+}
   
 </core-style>
 <core-style ref="globalTheme"></core-style>
