@@ -63,10 +63,11 @@
 
   html /deep/ paper-button[disabled] {
     background-color: rgba({{ g.theme.colors.palette[0].rgb }}, .7) !important;
+    color: rgba(255, 255, 255,.8) !important;
   }
 
   html /deep/ paper-button.neg {
-    background-color: #e8e8e8;
+    background-color: rgba(0,0,0,.15);
     color: inherit;
   }
 
@@ -77,6 +78,7 @@
     text-transform: none;
   }
 
+  
   html /deep/ paper-button::shadow .button-content {
     padding: 0px;
   }
